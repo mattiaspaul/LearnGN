@@ -5,7 +5,8 @@ We propose to capture large deformations in few iterations by learning a registr
 
 
  The overall concept includes trainable CNNs that may predict better displacement gradient and residual function values.
- ![Concept Figure](midl2022_short_fig.png)
+ 
+ ![Concept Figure](https://github.com/mattiaspaul/LearnGN/raw/main/midl2022_shortpaper_concept.png)
  
 This key idea is achieved by implementing a second-order Gauss-Newton descent with diffusion regularisation (sparse Laplacian) in a differentiable manner and doing so very efficiently (the below code takes fractions of seconds even for large 3D problems.
 ```
