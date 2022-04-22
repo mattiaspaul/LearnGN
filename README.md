@@ -1,5 +1,5 @@
-## Learning Registration Models with Differentiable Gauss-Newton Optimisation
-# MIDL 2022 short paper (under review)
+# Learning Registration Models with Differentiable Gauss-Newton Optimisation
+## MIDL 2022 short paper (under review)
 
 We propose to capture large deformations in few iterations by learning a registration model with differentiable Gauss-Newton and compact CNNs that predict displacement gradients and a suitable residual function. By incorporating a sparse Laplacian regulariser, structural / semantic representations and weak label-supervision we achieve state-of-the-art performance for abdominal CT registration.
 
