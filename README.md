@@ -43,3 +43,4 @@ class LSESolver(Function):
         return grad_A, grad_d.squeeze(), grad_b
  ```
  
+More details can be found in the PDF of my paper.
