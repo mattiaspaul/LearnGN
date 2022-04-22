@@ -3,7 +3,11 @@
 
 We propose to capture large deformations in few iterations by learning a registration model with differentiable Gauss-Newton and compact CNNs that predict displacement gradients and a suitable residual function. By incorporating a sparse Laplacian regulariser, structural / semantic representations and weak label-supervision we achieve state-of-the-art performance for abdominal CT registration.
 
-The key idea is to implement second-order Gauss-Newton descent with diffusion regularisation (sparse Laplacian) in a differentiable manner and doing so very efficiently (the below code takes fractions of seconds even for large 3D problems.
+
+ The overall concept includes trainable CNNs that may predict better displacement gradient and residual function values.
+ ![Concept Figure](midl2022_short_fig.png)
+ 
+This key idea is achieved by implementing a second-order Gauss-Newton descent with diffusion regularisation (sparse Laplacian) in a differentiable manner and doing so very efficiently (the below code takes fractions of seconds even for large 3D problems.
 ```
 import cupyx.scipy.sparse.csr_matrix
 import cupyx.scipy.sparse.linalg.cg
@@ -38,5 +42,3 @@ class LSESolver(Function):
         return grad_A, grad_d.squeeze(), grad_b
  ```
  
- The overall concept includes trainable CNNs that may predict better displacement gradient and residual function values.
- ![Concept Figure](http://url/to/img.png)
